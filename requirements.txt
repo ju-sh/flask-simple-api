@@ -1,0 +1,8 @@
+Flask==1.1.1
+pytest==5.1.2
+
+# #Vim command to get version number of pip package
+# #================================================
+# r! command outputs would be placed in buffer only after a newline.
+# r! pip3 freeze | grep pytest | cut -d'=' -f3
+# r! pip3 freeze | grep pytest | sed "s/.*==\(.*\)/\1/"
