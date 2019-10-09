@@ -1,6 +1,6 @@
 import pytest
 
-from cr2 import app
+from main import app
 
 @pytest.fixture
 def client():
