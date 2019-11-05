@@ -13,7 +13,7 @@ Demonstrates the usage of `pytest.mark.parametrize()` for parametrizing tests. W
 A pytest fixture is used to maintain the test client.
 
 ## Running development server
-A server can be run in debug mode (with hot reloading enabled) with
+A server can be run *in debug mode* (with hot reloading enabled) with
 
     FLASK_APP=main.py FLASK_DEBUG=1 python -m flask run
 
@@ -42,17 +42,25 @@ Or just use Postman.
 
 The containerised version can be used by building with
 
-    sudo docker build -t sapi:0.1 .
+    docker build -t sapi:0.1 .
 
-where `-t` option "allocates a pseudo tty". `sapi` is the name and `0.1` is the version.
+where `-t` option specifies "Name and optionally a tag in the ‘name:tag’ format". `sapi` is the name and `0.1` is the tag.
 
 The container can then be run with
 
-    sudo docker run -it -p 5000:5000 sapi:0.1
+    docker run -it -p 5000:5000 sapi:0.1
 
 where
 
  - `-i` option is to run the container in a 'non-detached mode'. ie, it will "keep STDIN open even if not attached".
  - `-p` is to publish a container's port to host interface in the following format:
 
-    ip:hostPort:containerPort | ip::containerPort | hostPort:co
+```
+ip:hostPort:containerPort | ip::containerPort | hostPort:containerPort | containerPort
+```
+
+---
+
+#### Reference
+[docker build](https://docs.docker.com/engine/reference/commandline/build/)
+[docker run](https://docs.docker.com/engine/reference/run/)
