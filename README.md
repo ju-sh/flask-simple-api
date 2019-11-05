@@ -35,3 +35,24 @@ POST requests: (not verified)
     curl -X POST localhost:5000/mult?a=3&b=4
 
 Or just use Postman.
+
+---
+
+## Using Docker
+
+The containerised version can be used by building with
+
+    sudo docker build -t sapi:0.1 .
+
+where `-t` option "allocates a pseudo tty". `sapi` is the name and `0.1` is the version.
+
+The container can then be run with
+
+    sudo docker run -it -p 5000:5000 sapi:0.1
+
+where
+
+ - `-i` option is to run the container in a 'non-detached mode'. ie, it will "keep STDIN open even if not attached".
+ - `-p` is to publish a container's port to host interface in the following format:
+
+    ip:hostPort:containerPort | ip::containerPort | hostPort:co
