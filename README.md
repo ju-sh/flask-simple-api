@@ -1,8 +1,8 @@
 # flask-simple-api
 A simple Flask API for floating point arithmetic operations.
 
-Input: Two numbers. `a` and `b`
-Output: A float number
+ - Input: Two numbers. `a` and `b`
+ - Output: A float number
 
 Modulo is not supported.
 
@@ -62,5 +62,6 @@ ip:hostPort:containerPort | ip::containerPort | hostPort:containerPort | contain
 ---
 
 #### Reference
-[docker build](https://docs.docker.com/engine/reference/commandline/build/)
-[docker run](https://docs.docker.com/engine/reference/run/)
+
+ - [docker build](https://docs.docker.com/engine/reference/commandline/build/)
+ - [docker run](https://docs.docker.com/engine/reference/run/)
